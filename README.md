@@ -1,38 +1,10 @@
-# sv
+# Про стек
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Мне кажется что использование svelte kit не сильно выходит за рамки стека, приведу пару аругментов почему я так думаю:
 
-## Creating a project
+- Сама настройка webpack+svelte с нуля не является целью проекта по тз
+- Проект не такого размера что-бы увидеть какую-то разницу между webpack и vite
+- Тут намернно не используется ничего специфичного для svelte kit или vite и должно заработать в любом окрыжении с какими-то минимальными доработками
+- Это рекомендованый svelte способ скаффолдинга новых проектов с удобными дефолтами
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Вообщем меня немного смутил webpack в стеке, но какжется что для новых проектов всёравно разумнее брать vite, а для старых там уже есть столько всего в конфиге что всёравно придется разбираться с нуля.
