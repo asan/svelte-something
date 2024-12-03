@@ -79,12 +79,6 @@
 		<Card {item} />
 	{/each}
 	<button class="add-button" onclick={addCoffee} disabled={isLoading}>+</button>
-
-	<pre>
-    isLoading: {isLoading}
-    error: {lastError}
-    lastInteractionTime: {lastInteractionTime}
-  </pre>
 </main>
 
 <style lang="less">
