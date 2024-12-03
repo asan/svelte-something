@@ -1,0 +1,82 @@
+/* tnx https://flexoki-shadcn-ui.vercel.app/ for nice colours */
+
+@layer base {
+	:root {
+		--background: hsl(48 100% 97%);
+		--foreground: hsl(0 3% 6%);
+		--card: hsl(48 100% 97%);
+		--card-foreground: hsl(0 3% 6%);
+		--popover: hsl(48 100% 97%);
+		--popover-foreground: hsl(0 3% 6%);
+		--primary: hsl(0 3% 6%);
+		--primary-foreground: hsl(48 100% 97%);
+		--secondary: hsl(51 33% 92%);
+		--secondary-foreground: hsl(0 3% 6%);
+		--muted: hsl(51 33% 92%);
+		--muted-foreground: hsl(50 3% 42%);
+		--accent: hsl(51 33% 92%);
+		--accent-foreground: hsl(0 3% 6%);
+		--destructive: hsl(3 62% 42%);
+		--destructive-foreground: hsl(48 100% 97%);
+		--border: hsl(51 21% 88%);
+		--input: hsl(51 21% 88%);
+		--ring: hsl(55 10% 79%);
+		--radiushsl: 0.5rem;
+
+		--red-primary: hsl(3 62% 42%);
+		--red-secondary: hsl(5 61% 54%);
+		--orange-primary: hsl(22 80% 41%);
+		--orange-secondary: hsl(23 70% 51%);
+		--yellow-primary: hsl(45 99% 34%);
+		--yellow-secondary: hsl(45 82% 45%);
+		--green-primary: hsl(73 84% 27%);
+		--green-secondary: hsl(72 46% 41%);
+		--cyan-primary: hsl(175 57% 33%);
+		--cyan-secondary: hsl(175 49% 45%);
+		--blue-primary: hsl(212 68% 39%);
+		--blue-secondary: hsl(208 49% 50%);
+		--purple-primary: hsl(259 42% 43%);
+		--purple-secondary: hsl(251 40% 64%);
+		--magenta-primary: hsl(326 55% 41%);
+		--magenta-secondary: hsl(329 54% 59%);
+	}
+
+	.dark {
+		--background: hsl(0 3% 6%);
+		--foreground: hsl(55 10% 79%);
+		--card: hsl(0 3% 6%);
+		--card-foreground: hsl(55 10% 79%);
+		--popover: hsl(0 3% 6%);
+		--popover-foreground: hsl(55 10% 79%);
+		--primary: hsl(55 10% 79%);
+		--primary-foreground: hsl(0 3% 6%);
+		--secondary: hsl(30 4% 11%);
+		--secondary-foreground: hsl(55 10% 79%);
+		--muted: hsl(30 4% 11%);
+		--muted-foreground: hsl(43 3% 52%);
+		--accent: hsl(30 4% 11%);
+		--accent-foreground: hsl(55 10% 79%);
+		--destructive: hsl(5 61% 54%);
+		--destructive-foreground: hsl(0 3% 6%);
+		--border: hsl(30 3% 15%);
+		--input: hsl(30 3% 15%);
+		--ring: hsl(30 3% 24%);
+
+		--red-primary: hsl(5 61% 54%);
+		--red-secondary: hsl(3 62% 42%);
+		--orange-primary: hsl(23 70% 51%);
+		--orange-secondary: hsl(22 80% 41%);
+		--yellow-primary: hsl(45 82% 45%);
+		--yellow-secondary: hsl(45 99% 34%);
+		--green-primary: hsl(72 46% 41%);
+		--green-secondary: hsl(73 84% 27%);
+		--cyan-primary: hsl(175 49% 45%);
+		--cyan-secondary: hsl(175 57% 33%);
+		--blue-primary: hsl(208 49% 50%);
+		--blue-secondary: hsl(212 68% 39%);
+		--purple-primary: hsl(251 40% 64%);
+		--purple-secondary: hsl(259 42% 43%);
+		--magenta-primary: hsl(329 54% 59%);
+		--magenta-secondary: hsl(326 55% 41%);
+	}
+}
