@@ -2,6 +2,8 @@
 	import { fetchCoffee, IDLE_TIMEOUT, type Coffee } from '$lib';
 	import { fade } from 'svelte/transition';
 	import Card from './Card.svelte';
+	import { onMount } from 'svelte';
+	import Plus from './Plus.svelte';
 
 	const collection: Coffee[] = $state([]);
 
@@ -22,6 +24,7 @@
 		try {
 			const coffee = await fetchCoffee();
 			collection.push(coffee);
+			setTimeout(() => scrollToBottom(), 10);
 		} catch (e: any) {
 			lastError = e.toString();
 		} finally {
@@ -51,7 +54,13 @@
 		};
 	});
 
-	addCoffee();
+	onMount(() => {
+		addCoffee();
+	});
+
+	function scrollToBottom() {
+		window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+	}
 </script>
 
 <!-- here we are deciding what is considered user interaction  -->
@@ -78,7 +87,7 @@
 	{#each collection as item (item.id)}
 		<Card {item} />
 	{/each}
-	<button class="add-button" onclick={addCoffee} disabled={isLoading}>+</button>
+	<button class="add-button" onclick={addCoffee} disabled={isLoading}><Plus /></button>
 </main>
 
 <style lang="less">
@@ -104,33 +113,18 @@
 		gap: 1rem;
 	}
 
-	// proudly borrowed this button
-	// from svelte tutorial
 	.add-button {
-		font-size: 1.4em;
-		width: 6em;
-		height: 6em;
+		width: 100px;
+		height: 100px;
+
 		border-radius: 50%;
-		background: radial-gradient(circle at 25% 25%, var(--red-secondary) 0, var(--red-primary) 100%);
-		box-shadow:
-			0 8px 0 var(--red-secondary),
-			2px 12px 10px rgba(0, 0, 0, 0.35);
-		color: var(--accent-foreground);
-		text-shadow:
-			-1px -1px 2px rgba(0, 0, 0, 0.3),
-			1px 1px 2px rgba(255, 255, 255, 0.4);
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		font-size: 1rem;
-		line-height: 1rem;
-		transform: translate(0, -8px);
-		transition: all 0.2s;
+		border: 0;
+
+		background: transparent;
+		color: var(--red-primary);
 
 		&:active {
-			transform: translate(0, -2px);
-			box-shadow:
-				0 2px 0 var(--red-secondary),
-				2px 6px 10px rgba(0, 0, 0, 0.35);
+			color: var(--red-secondary);
 		}
 
 		&:disabled {
