@@ -33,6 +33,7 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-vercel": "^5.5.0",
 		"less": "^4.2.1"
 	}
 }
